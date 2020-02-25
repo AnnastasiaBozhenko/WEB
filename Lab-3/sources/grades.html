@@ -5,6 +5,8 @@
         <title>Grades</title>
         <link rel="shortcut icon" href="resources/images/applei.jpg" type="image/jpg">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <script src="js/script.js"></script>
+
     </head>
 
     <body class="bodyG">
@@ -15,10 +17,12 @@
             <a href="sound.html">Audio</a>
         </div>
         <br>
-        <button type="button"
-                onclick="document.getElementById('demo').innerHTML = Date()">
-            Click me to display Date and Time.</button>
-        <div id="main">
+        <button type="button" onclick="switchDisplaying()">
+            switchDisplaying.</button>
+
+
+
+        <div id="target" style="display: none;">
             <table>
                 <tr>
                     <th> Subject</th>
@@ -34,13 +38,8 @@
                 </tr>
             </table>
         </div>
-        #main {
-        display: none;
-        }
-        #click:hover {
-        cursor: pointer;
-        }
-    </body>>
+
+    </body>
     <footer >
         <a href="https://github.com/">
             <img src="resources/images/git.jpg" type =<image/jpg style="weight: 50px; height: 50px"></a>
