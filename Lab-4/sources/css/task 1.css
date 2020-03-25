@@ -1,0 +1,56 @@
+.main-container-style {
+    margin: 20rem;
+}
+
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: #ff97a1;
+    width: 0px;
+    height: 0px;
+    opacity: 0.7;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #a97bff;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+   transition: transform 0s;
+
+}
+#star-five:before {
+    opacity: 0.5;
+    border-bottom: 80px solid #91ffbf;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+#star-five:after {
+    opacity: 0.5;
+    position: absolute;
+    display: block;
+    color: #34ff89;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #ffadd7;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+div {
+    transition: transform 3s;
+    transition-timing-function: linear;
+}
+
+div:hover {
+    transform: scale(1.5);
+}

@@ -1,0 +1,43 @@
+
+body {
+    overflow: hidden;
+}
+
+
+.side {
+    opacity: 0.5;
+    margin: 10rem;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
+    font: normal 60px Arial;
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    animation: box 5s ease-in-out infinite;
+}
+
+@keyframes box{
+    0% {
+        background:  linear-gradient(#fbceda, #cab3ff, #a97bff);
+    }
+
+    20% {
+        background:  linear-gradient(#e2b9c4, #e2999c, #936cdf);
+    }
+
+    40% {
+        background:  linear-gradient(#e2b9c4, #e2999c, #936cdf);
+
+    }
+
+    60% {
+        background:  linear-gradient(#49529f, #e2355b, #936cdf);
+    }
+
+    80% {  background:  linear-gradient( #372855, #e2355b, #261c3b);
+
+    }
+    90%,100% {     background-image: url("resources/images/zn.jpg");
+    }
+}

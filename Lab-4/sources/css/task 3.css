@@ -1,0 +1,16 @@
+.ball {
+    margin: 10rem;
+    opacity: 0.5;
+    width: 250px;
+    height: 250px;
+    border-radius: 125%;
+    position: relative;
+    background: radial-gradient(circle at bottom, #81e8f6, #76deef 10%, #055194 80%, #062745 100%); }
+div {
+    transition: transform 3s;
+    transition-timing-function: linear;
+}
+
+div:hover {
+    transform: scale(1.5);
+}
