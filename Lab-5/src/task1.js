@@ -93,8 +93,8 @@ function threeVowels(consSymbol,idName) {
 function moreThanThreeConsonants(consSymbol,idName) {
     if (consSymbol.length > 3) {
         idName.push(consSymbol[0]);
-        idName.push(consSymbol[consSymbol.length - 2]);
-        idName.push(consSymbol[consSymbol.length - 1]);
+        idName.push(consSymbol[2]);
+        idName.push(consSymbol[3]);
     } else {
         console.log('error');
     }
