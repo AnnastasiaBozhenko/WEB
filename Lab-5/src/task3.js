@@ -4,17 +4,16 @@ function additivePersistence(number) {
     let res = 0;
     let count = 0;
     while (true){
-        for(let i = 0; i < val.length; i++){
-            res += Number(val[i]);
-            if (i == val.length-1 ){ console.log("resalt " + res);}
-
-        }
-        count++;
-        if( res < 10){
-            // console.log("resalt " + res);
+        if( res < 10 && val<10){
             console.log("It takes "+ count + ' iterations to reach a single-digit number' );
             return count;
         }
+        for(let i = 0; i < val.length; i++){
+            res += Number(val[i]);
+            // if (i == val.length-1 ){ console.log("result " + res);}
+        }
+
+        count++;
         val = String(res).split('');
         res = 0;
     }
@@ -26,14 +25,10 @@ function multiplicativePersistence(number) {
     while (true) {
         for (let i = 0; i < val.length; i++) {
             res *= Number(val[i]);
-            if (i == val.length - 1) {
-                console.log("resalt " + res);
-            }
-
+            // if (i == val.length - 1) {// console.log("result " + res);}
         }
         count++;
         if (res < 10) {
-            // console.log("resalt " + res);
             console.log("It takes " + count + ' iterations to reach a single-digit number');
             return count;
         }
@@ -41,7 +36,7 @@ function multiplicativePersistence(number) {
         res = 1;
     }
 }
-console.log("input:1679583");
-additivePersistence(1679583);
-console.log("4996238671872");
-multiplicativePersistence(4996238671872);
+// console.log("input:1679583");
+// additivePersistence(1679583);
+// console.log("input:4996238671872");
+// multiplicativePersistence(4996238671872);
