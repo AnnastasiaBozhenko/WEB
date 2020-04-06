@@ -35,6 +35,3 @@ function oImageClick(id) {
     // console.log(JSON.stringify(id));
 }
 
-// 1. Переменува це все нормально.
-// 2. gallery-container / gallery-pills to flex box
-// 3.
