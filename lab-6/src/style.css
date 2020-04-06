@@ -1,0 +1,21 @@
+.gallery-container {
+    padding: 5rem;
+}
+
+.gallery-pills {
+    margin: 1rem;
+    border: 5px solid #473939;
+    border-radius: 5px;
+    width: 949px;
+    height: 1259px;
+    display: inline-block
+}
+
+body{
+    background-image:url('resource/image/back.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
