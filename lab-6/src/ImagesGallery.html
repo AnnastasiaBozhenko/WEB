@@ -1,15 +1,44 @@
+
+<!--3) При натисненні на зображення, воно має відкритись на весь екран.
+ !!!!!!!!Перехід до збільшеного режиму має бути з анімацією.-->
+<!--5) При відсутності або неможливості завантажити зображення, замість галереї має бути виведене зображення placeholder.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Anime</title>
+    <link rel="shortcut icon" href="resource/image/i.png" type="image/jpg">
     <script src="script.js"></script>
     <link rel = "stylesheet"
           type = "text/css"
           href = "style.css" />
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "preloader.css" />
 </head>
+
 <body onload="addAllPhotosOnLoad()">
-<div id="main-container" class="gallery-container">
+<div class="preloader">
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
 </div>
+<div class="modal" id="modal">
+    <div class="buttonC" onclick="closeMod()">
+        <img src="resource/image/x.png" width="200" height="200"></div>
+
+    <div class="buttonR" onclick="right()">
+        <img src="resource/image/r.png" width="150" height="150"></div>
+
+    <div class="buttonL" onclick="left()">
+        <img src="resource/image/l.png" width="150" height="150"></div>
+
+</div>
+
+<div id="main-container" class="gallery-container, bor" downloading = "" ,error = "f" >
+</div>
+
 </body>
+
 </html>
