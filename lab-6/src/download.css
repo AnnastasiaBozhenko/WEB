@@ -1,0 +1,39 @@
+
+body {
+    margin: 0;
+}
+
+.preloader {
+    opacity: 70%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #070100;
+    z-index: 1001;
+}
+
+.preloader__image {
+    position: relative;
+    opacity: 70%;
+    top: 43%;
+    left: 47%;
+    width: 600px;
+    height: 600px;
+    margin-top: -32px;
+    margin-left: -32px;
+    text-align: center;
+    background: url('resource/image/a.gif') no-repeat 50% 50%;
+    /*расположение (url) изображения gif и др. параметры*/
+}
+
+.loaded_hiding .preloader {
+    transition: 6s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
