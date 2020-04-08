@@ -4,43 +4,47 @@
 
 .gallery-pills {
     margin: 1rem;
-    right:4rem ;
-    width: 1000px;
-    height: 1300px;
+    right: 4rem;
+    width: 250px;
+    height: 325px;
     display: inline-block;
     box-shadow: 0 0 0 2px #00f9f9, 0 0 0 3px #fc0201, 0 0 0 5px #474347;
 }
 
-
-body{
-    font-size:20rem;
-    background-image:url('resource/image/back.jpg') ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    text-align: center;
-    max-width: 385rem;
-}
-.modal {
-    box-shadow: 0 0 0 3px #00f9f9, 0 0 0 6px #fc0201, 0 0 0 8px #474347;
+.buttonC {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1900px;
-    height: 2800px;
-    display: none;
-}
-.buttonC{
-    position: fixed; /* Фиксированное положение */
+    top: 0;
     right: 0;
 }
-.buttonR{
+
+.buttonR {
     position: fixed;
-    right: 0;top: 50%;
-}.buttonL{
+    right: 0;
+    top: 50%;
+}
+
+.buttonL {
     position: fixed;
-    left: 0;top: 50%;
+    left: 0;
+    top: 50%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+    font-weight: 200;
+    background-image: url('resource/image/back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-size: cover;*/
+    text-align: center;
+    max-width: 100%;
 }

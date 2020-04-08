@@ -1,10 +1,5 @@
-
-body {
-    margin: 0;
-}
-
-.preloader {
-    opacity: 70%;
+.back{
+    opacity: 90%;
     position: fixed;
     left: 0;
     top: 0;
@@ -14,26 +9,64 @@ body {
     background: #070100;
     z-index: 1001;
 }
-
-.preloader__image {
-    position: relative;
-    opacity: 70%;
-    top: 43%;
-    left: 47%;
-    width: 600px;
-    height: 600px;
-    margin-top: -32px;
-    margin-left: -32px;
-    text-align: center;
-    background: url('resource/image/a.gif') no-repeat 50% 50%;
-    /*расположение (url) изображения gif и др. параметры*/
+#modal-container {
+    position: fixed;
+    display: table;
+    width: 475px;
+    height: 700px;
+    top: 10%;
+    left: 39%;
+    transform: scale(0);
+    z-index: 1;
+    box-shadow: 0 0 0 3px #00f9f9, 0 0 0 6px #fc0201, 0 0 0 8px #474347;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.loaded_hiding .preloader {
-    transition: 6s opacity;
-    opacity: 0;
+#modal-container.one {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-.loaded .preloader {
-    display: none;
+#modal-container.one .modal-background .modal {
+    transform: scale(0);
+    animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
+
+#modal-container.one.out {
+    transform: scale(1);
+    animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container.one.out .modal-background .modal {
+    animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+
+@keyframes unfoldIn {
+    0% {
+        transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes unfoldOut {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0.005) scaleX(0);
+    }
+}
+
+
+
+
