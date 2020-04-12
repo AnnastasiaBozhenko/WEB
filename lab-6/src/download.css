@@ -1,14 +1,4 @@
-.back{
-    opacity: 90%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    background: #070100;
-    z-index: 1001;
-}
+
 #modal-container {
     position: fixed;
     display: table;
