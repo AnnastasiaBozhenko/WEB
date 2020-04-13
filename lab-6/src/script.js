@@ -58,12 +58,16 @@ function onImageClick() {
     objMod.style.display = "block";
     currentImage = id;
 }
-
-function onCloseModal() {
+function onCloseModalClick() {
     let objMod = document.getElementById("modal-container");
     objMod.className = 'one out';
 }
-
+function CloseModalClickOver() {
+    document.getElementById("x").src = "resource/image/x.png";
+}
+function CloseModalClickOut() {
+    document.getElementById("x").src = "resource/image/xce.png";
+}
 function onRightModalClick() {
     if (currentImage < imgArr.length - 1) {
         currentImage = Number(currentImage) + 1;
@@ -71,26 +75,11 @@ function onRightModalClick() {
     let objMod = document.getElementById("modal-container");
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
-function ModalClick() {
-    document.getElementById("x").src = "resource/image/x.png";
-}
-function ModalClickO() {
-    document.getElementById("x").src = "resource/image/xce.png";
-}
-function RightModalClick() {
+function RightModalClickOver() {
     document.getElementById("r").src = "resource/image/r.png";
-}
-function RightModalClickO() {
+}function RightModalClickOut() {
     document.getElementById("r").src = "resource/image/rce.png";
 }
-function LeftModalClick() {
-    document.getElementById("l").src = "resource/image/l.png";
-}
-function LeftModalClickO() {
-    document.getElementById("l").src = "resource/image/lce.png";
-}
-
-
 function onLeftModalClick() {
     if (currentImage > 0) {
         currentImage = Number(currentImage) - 1;
@@ -98,3 +87,21 @@ function onLeftModalClick() {
     let objMod = document.getElementById("modal-container");
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
+function LeftModalClickOver() {
+    document.getElementById("l").src = "resource/image/l.png";
+}
+function LeftModalClickOut() {
+    document.getElementById("l").src = "resource/image/lce.png";
+}
+let buttonRightModalClick = document.getElementById("idRightButton");
+buttonRightModalClick.addEventListener("mouseover",RightModalClickOver);
+buttonRightModalClick.addEventListener("mouseout",RightModalClickOut);
+buttonRightModalClick.addEventListener("click",onRightModalClick);
+let buttonLeftModalClick = document.getElementById("idLeftButton");
+buttonLeftModalClick.addEventListener("mouseover",LeftModalClickOver);
+buttonLeftModalClick.addEventListener("mouseout",LeftModalClickOut);
+buttonLeftModalClick.addEventListener("click",onLeftModalClick);
+let buttonCloseModalClick = document.getElementById("idCloseButton");
+buttonCloseModalClick.addEventListener("mouseover",CloseModalClickOver);
+buttonCloseModalClick.addEventListener("mouseout",CloseModalClickOut);
+buttonCloseModalClick.addEventListener("click",onCloseModalClick);
