@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Anime</title>
-    <link rel="shortcut icon" href="resource/image/i.png" type="image/jpg">
-    <link rel = "stylesheet"
-          type = "text/css"
-          href = "style.css" />
-    <link rel = "stylesheet"
-          type = "text/css"
-          href = "preloader.css" />
-    <link rel = "stylesheet"
-          type = "text/css"
-          href = "download.css" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Anime</title>
+        <link rel="shortcut icon" href="resource/image/i.png" type="image/jpg">
+        <link rel = "stylesheet"
+              type = "text/css"
+              href = "style.css" />
+        <link rel = "stylesheet"
+              type = "text/css"
+              href = "preloader.css" />
+        <link rel = "stylesheet"
+              type = "text/css"
+              href = "download.css" />
+    </head>
 
-<body onload="onLoadAddContent()">
+    <body onload="onLoadAddContent()" beforeunload="hideSpinner()">
 
-<div class="preloader">
-    <div class="preloader__image"></div>
-</div>
+        <div class="preloader">
+            <div class="preloader__image"></div>
+        </div>
 
-<div id="modal-container" style="display: none;" class="modal">
-    <div id ="idCloseButton" class="buttonC " onclick="onCloseModal()"  onmouseout="ModalClickO()" onmouseover="ModalClick()">
-        <img id="x" src="resource/image/xce.png" width="50" height="50"></div>
+    <div id="modal-container" style="display: none;" >
+            <div id="modal-back"></div>
+            <div id="modal-image" >
+                <div id ="idCloseButton" class="buttonC" >
+                    <img id="x" src="resource/image/xce.png" width="50" height="50"></div>
 
-    <div id ="idRightButton" class="buttonR " >
-        <img id="r" src="resource/image/rce.png" width="37" height="37">
+                <div id ="idRightButton" class="buttonR " >
+                    <img id="r" src="resource/image/rce.png" width="37" height="37"></div>
+
+                <div id ="idLeftButton" class="buttonL">
+                    <img id="l" src="resource/image/lce.png" width="37" height="37"></div>
+            </div>
     </div>
+        <div id="main-container" class="gallery-container, bor" ></div>
+        <script src="script.js"></script>
 
-    <div id ="idLeftButton" class="buttonL">
-        <img id="l" src="resource/image/lce.png" width="37" height="37"></div>
-</div>
-</div>
-<div id="main-container" class="gallery-container, bor" ></div>
-<script src="script.js"></script>
-
-</body>
+    </body>
 </html>

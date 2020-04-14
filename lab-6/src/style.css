@@ -36,7 +36,6 @@
 html,
 body {
     min-height: 100%;
-    height: 100%;
     background-size: cover;
     background-position: top center;
     font-family: helvetica neue, helvetica, arial, sans-serif;
@@ -44,7 +43,7 @@ body {
     background-image: url('resource/image/back.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /*background-size: cover;*/
+    background-size: cover;
     text-align: center;
     max-width: 100%;
 }

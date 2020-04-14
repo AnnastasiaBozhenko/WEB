@@ -42,16 +42,19 @@ function hideSpinner() {
     window.setTimeout(function () {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
-    }, 4000);
+    }, 2000);
 }
 function onImageClick() {
     let id = this.id;
     let obj = document.getElementById(id);
-    console.log(obj.src )
+    console.log("obj.src",obj.src )
     let objMod = document.getElementById("modal-container");
-    console.log(objMod)
-    objMod.style.backgroundImage = "url(" + obj.src + ")";
-    objMod.onerror = function () {
+    let objModImg = document.getElementById("modal-image");
+    console.log("objModImg",objModImg)
+    console.log("objMod",objMod.style.display )
+    objModImg.style.backgroundImage = "url(" + obj.src + ")";
+    console.log("objModImgUR", objModImg.style.backgroundImage)
+    objModImg.onerror = function () {
         objMod.style.backgroundImage = "url(" + this.DEFAULT_IMAGE_URL + ")"
     };
     objMod.className = 'one';
@@ -72,7 +75,7 @@ function onRightModalClick() {
     if (currentImage < imgArr.length - 1) {
         currentImage = Number(currentImage) + 1;
     } else currentImage = 0;
-    let objMod = document.getElementById("modal-container");
+    let objMod = document.getElementById("modal-image");
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
 function RightModalClickOver() {
@@ -84,7 +87,7 @@ function onLeftModalClick() {
     if (currentImage > 0) {
         currentImage = Number(currentImage) - 1;
     } else currentImage = imgArr.length - 1;
-    let objMod = document.getElementById("modal-container");
+    let objMod = document.getElementById("modal-image");
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
 function LeftModalClickOver() {

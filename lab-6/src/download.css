@@ -1,12 +1,30 @@
-
 #modal-container {
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+#modal-back{
+    opacity:70%;
+    background-color: #000000;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+
+#modal-image {
+    background-image: url('resource/image/back.jpg');
     position: fixed;
     display: table;
     width: 475px;
     height: 700px;
     top: 10%;
     left: 39%;
-    transform: scale(0);
+    transform: scale(1);
     z-index: 1;
     box-shadow: 0 0 0 3px #00f9f9, 0 0 0 6px #fc0201, 0 0 0 8px #474347;
     background-repeat: no-repeat;
