@@ -47,13 +47,9 @@ function hideSpinner() {
 function onImageClick() {
     let id = this.id;
     let obj = document.getElementById(id);
-    console.log("obj.src",obj.src )
     let objMod = document.getElementById("modal-container");
     let objModImg = document.getElementById("modal-image");
-    console.log("objModImg",objModImg)
-    console.log("objMod",objMod.style.display )
     objModImg.style.backgroundImage = "url(" + obj.src + ")";
-    console.log("objModImgUR", objModImg.style.backgroundImage)
     objModImg.onerror = function () {
         objMod.style.backgroundImage = "url(" + this.DEFAULT_IMAGE_URL + ")"
     };
@@ -66,10 +62,10 @@ function onCloseModalClick() {
     objMod.className = 'one out';
 }
 function CloseModalClickOver() {
-    document.getElementById("x").src = "resource/image/x.png";
+    document.getElementById("closeButton").src = "resource/image/x.png";
 }
 function CloseModalClickOut() {
-    document.getElementById("x").src = "resource/image/xce.png";
+    document.getElementById("closeButton").src = "resource/image/xce.png";
 }
 function onRightModalClick() {
     if (currentImage < imgArr.length - 1) {
@@ -79,9 +75,9 @@ function onRightModalClick() {
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
 function RightModalClickOver() {
-    document.getElementById("r").src = "resource/image/r.png";
+    document.getElementById("rightButton").src = "resource/image/r.png";
 }function RightModalClickOut() {
-    document.getElementById("r").src = "resource/image/rce.png";
+    document.getElementById("rightButton").src = "resource/image/rce.png";
 }
 function onLeftModalClick() {
     if (currentImage > 0) {
@@ -91,10 +87,10 @@ function onLeftModalClick() {
     objMod.style.backgroundImage = "url(" + imgArr[currentImage] + ")";
 }
 function LeftModalClickOver() {
-    document.getElementById("l").src = "resource/image/l.png";
+    document.getElementById("leftButton").src = "resource/image/l.png";
 }
 function LeftModalClickOut() {
-    document.getElementById("l").src = "resource/image/lce.png";
+    document.getElementById("leftButton").src = "resource/image/lce.png";
 }
 let buttonRightModalClick = document.getElementById("idRightButton");
 buttonRightModalClick.addEventListener("mouseover",RightModalClickOver);
@@ -108,3 +104,15 @@ let buttonCloseModalClick = document.getElementById("idCloseButton");
 buttonCloseModalClick.addEventListener("mouseover",CloseModalClickOver);
 buttonCloseModalClick.addEventListener("mouseout",CloseModalClickOut);
 buttonCloseModalClick.addEventListener("click",onCloseModalClick);
+document.addEventListener("keydown",function(event) {
+    if (event.key == 'ArrowRight') {
+        onRightModalClick();
+    }
+});
+document.addEventListener("keydown",function(event) {
+    if (event.key == 'ArrowLeft') {
+        onLeftModalClick();
+    }
+});
+document.getElementById("modal-back").addEventListener("click",onCloseModalClick);
+
