@@ -23,7 +23,7 @@ body {
     text-align: center;
     background: url('resource/image/a.gif') no-repeat 50% 50%;
 }
-.loaded_hiding.preloader {
+.loaded_hiding .preloader {
     transition: 6s opacity;
     opacity: 0;
 }

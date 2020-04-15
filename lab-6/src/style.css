@@ -38,9 +38,8 @@ body {
     min-height: 100%;
     background-size: cover;
     background-position: top center;
-    font-family: helvetica neue, helvetica, arial, sans-serif;
     font-weight: 200;
-    background-image: url('resource/image/back.jpg');
+    background-image: url('resource/image/backG.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
