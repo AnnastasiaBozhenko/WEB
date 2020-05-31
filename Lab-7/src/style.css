@@ -135,6 +135,10 @@ button{
     width:155px ;
     margin-top:50px ;
 }
+button:hover {
+    background-color: white;
+    color: #ea0d60;
+}
 .container1{
     transform: scale(1);
     height: 956px;
@@ -160,9 +164,28 @@ button{
     float: left;
     color:black;
 }
-.text .h{
+.text .h-1{
     font-size: 55px;
     color:black;
+    z-index: 1000;
+    position: absolute;
+    bottom: 30rem;
+}
+
+.text .h-2{
+    font-size: 55px;
+    color:black;
+    z-index: 1000;
+    position: absolute;
+    bottom: 12.5rem;
+}
+
+.text .h-3{
+    font-size: 55px;
+    color:black;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0.3rem;
 }
 .container2{
     background-color: black;
@@ -235,4 +258,176 @@ footer{
     background-color: black;
     height: 555px;
     width: 100%;
+}
+
+.close-modal-button {
+    float: right;
+    padding: 0.3rem 0.7rem;
+}
+.close-modal-button:hover {
+    color: #ea0d60;
+}
+
+.callback-style {
+    padding: 0.3rem 0.7rem;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ea0d60;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 3rem;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-padding {
+    padding: 5rem 18rem;
+}
+.footer-buttons {
+    font-size: 0.8rem;
+    font-family:'Lato-Regular',sans-serif;
+    display: block;
+    padding-bottom: 0.3rem;
+    color: white;
+}
+.footer-buttons:hover {
+    color: #ea0d60;
+}
+
+.footer-links {
+    color: #ea0d60;
+}
+
+.footer-buttons-header {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.footer-social-network-buttons {
+    color: white;
+    padding: 0.3rem;
+    font-weight: 100;
+}
+
+.left-footer-copyright {
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    float: left;
+}
+.right-footer-buttons {
+    padding: 1rem;
+    float: right;
+}
+.number-style_01 {
+    color: #eaeaea;
+    opacity: 90%;
+    padding: 0.3rem;
+    z-index: 0;
+    font-size: 60px;
+    position: absolute;
+    bottom: 31rem;
+    right: 32rem;
+}
+.number-style_02 {
+    color: #eaeaea;
+    opacity: 50%;
+    padding: 0.3rem;
+    z-index: 0;
+    font-size: 60px;
+    position: absolute;
+    bottom: 13.5rem;
+    right: 32rem;
+}
+.number-style_03 {
+    color: #eaeaea;
+    opacity: 25%;
+    padding: 0.3rem;
+    z-index: 0;
+    font-size: 60px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 32.3rem;
+}
+.display-relative{
+    position: relative;
+}
+
+.car-position-top {
+    z-index: 0;
+    font-family: 'Monsterrat-Bold',sans-serif;
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    right: 400px;
+    bottom: -90px;
+}
+.car-position-bottom {
+    z-index: 0;
+    font-family: 'Monsterrat-Bold',sans-serif;
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    right: 443px;
+    bottom: -660px;
+}
+
+.car-image {
+    z-index: 1000;
+    position: absolute;
+    right: 50px;
+}
+.price-style {
+  text-align: center;
+    font-family: 'Lato-Hairline',sans-serif;
+    font-size: 80px;
+    color: #ea0d60;
+    text-align: center;
+    text-shadow: 0 0 5px #ea0d60, 0 0 10px #ea0d60, 0 0 15px #ea0d60, 0 0 20px #ea0d60, 0 0 25px #ea0d60, 0 0 30px #ea0d60, 0 0 35px #ea0d60;
 }

@@ -6,6 +6,8 @@ function save(){
     localStorage.setItem('Name', enteredName);
     localStorage.setItem('Number', enteredNumber)
     localStorage.setItem('Date', enteredDate)
+    this.closeModal();
+    this.showToast();
 }
 
 function loadInfo(){
@@ -30,12 +32,21 @@ window.onload = function() {
     } else {
         sessionStorage.setItem('loaded', true);
     }
+};
+
+function closeModal() {
+    let objMod = document.getElementById('modal');
+    objMod.style.display = 'none';
 }
 
-function close(){
+function openModal() {
     let objMod = document.getElementById('modal');
-    objMod.style.display = "none";
-    alert("hohoh");
+    objMod.style.display = 'block';
 }
-let buttonCloseModalClick = document.getElementById('idCloseButton');
-buttonCloseModalClick.addEventListener("click",close);
+
+
+function showToast() {
+    let x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
