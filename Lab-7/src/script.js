@@ -1,4 +1,3 @@
-// Збереження в Local Storage
 function save(){
     let enteredName= document.getElementById('Name').value;
     let enteredNumber = document.getElementById('Number').value;
@@ -9,7 +8,6 @@ function save(){
     this.closeModal();
     this.showToast();
 }
-
 function loadInfo(){
     let enteredName = localStorage.getItem('Name');
     let enteredNumber = localStorage.getItem('Number');
@@ -33,18 +31,14 @@ window.onload = function() {
         sessionStorage.setItem('loaded', true);
     }
 };
-
 function closeModal() {
     let objMod = document.getElementById('modal');
     objMod.style.display = 'none';
 }
-
 function openModal() {
     let objMod = document.getElementById('modal');
     objMod.style.display = 'block';
 }
-
-
 function showToast() {
     let x = document.getElementById("snackbar");
     x.className = "show";
