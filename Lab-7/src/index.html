@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <title>Auto</title>
     <link rel="stylesheet" href="style.css">
-    <!--        <script src="script.js"></script>-->
+    <link rel="stylesheet" href="window.css">
+    <script src="script.js"></script>
 </head>
 <body>
+<div class="fixed-overlay" id="modal">
+    <div class="modal" >
+        <div class="modal_container">
+            CALLBACK
+            <div class="close" id="idCloseButton">X</div>
+            <input type="text" placeholder="Name" id="Name"/>
+            <input type="number" placeholder="PhoneNumber" id="Number"/>
+            <input type="date" placeholder="Date" id="Date"/>
+            <button class="button_form_in" id="90" onclick="save()">CALL ME</button>
+        </div>
+    </div>
+</div>
 
 <header id="headerId" class="header">
     <div class="container">
@@ -33,7 +46,8 @@
                 OUD
                 <div id="item__heading3"> H7 </div>
             </div>
-            <button> GO DRIVE </button>
+            <a href="#01"><button> GO DRIVE </button> </a>
+
             <div class="item__image">
                 <img src="resource/image/Header1.png" width="1091px", height="740px">
             </div>
@@ -41,7 +55,7 @@
     </div>
     </div>
 </header>
-<div class="container1">
+<div class="container1" id="01">
     <div class="item__image1">
         <img src="resource/image/body1.png" width="1703px", height="467px">
     </div>
@@ -67,7 +81,7 @@
         <div class="item__heading5">
             20%OFF
         </div>
-        <button > BUY NOW</button>
+        <a href="#03"> <button > BUY NOW</button> </a>
         <div class="item__image2">
             <img src="resource/image/body2.png" width="744px", height="316px">
         </div>
@@ -88,7 +102,7 @@
     </div>
 </div>
 
-<div class="container4">
+<div class="container4" id = "03">
     <div class="container4_centre">
         <div class="text">
             <div class="h" STYLE="color: white">PRICE</div>
